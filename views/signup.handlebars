@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>DomoMaker</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/assets/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="/assets/css/materialize.min.css"  media="screen,projection"/>
+  <link rel="shortcut icon" href="/assets/img/favicon.png"/>
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
+</head>
+<body>
+  <nav class="green darken-2">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/login">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+  <h1 class="container center-align" id="golfHeader">Golf Tracker</h1>
+  <section id="signup">
+    <form id="signupForm" name="signupForm" action="/signup" method="POST" class="mainForm container">
+      <label for="username">Username: </label>
+      <input id="user" type="text" name="username" placeholder="username"/>
+      <label for="pass">Password: </label>
+      <input id="pass" type="password" name="pass" placeholder="password"/>
+      <label for="pass2">Password: </label>
+      <input id="pass2" type="password" name="pass2" placeholder="retype password"/>
+      <input type="hidden" name="_csrf" value={{csrfToken}} />
+      <input class="formSubmit" type="submit" value="Sign Up" />
+    </form>
+  </section>
+  <div id="domoMessage">
+    <h3><span id="errorMessage"></span></h3>
+  </div>
+  <script src="/assets/js/bundle.js"></script>
+</body>
+</html>

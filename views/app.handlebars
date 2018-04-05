@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Golf Tracker</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/assets/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="/assets/css/materialize.min.css"  media="screen,projection"/>
+  <link rel="shortcut icon" href="/assets/img/favicon.png"/>
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
+</head>
+<body>
+  <nav class="green darken-2">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+  <h1 class="container center-align" id="golfHeader">Golf Tracker</h1>
+  <section id="makeGolfCard">
+    <form id="golfCardForm" name="golfCardForm" action="/maker" method="POST" class="golfCardForm container">
+      <label for="courseName">Course Name: </label>
+      <input id="courseName" type="text" name="courseName" placeholder="Course Name"/>
+      <label for="score">Score: </label>
+      <input id="score" type="text" name="score" placeholder="Score"/>
+      <input type="hidden" name="_csrf" value={{csrfToken}} />
+      <input class="makeGolfCardSubmit" type="submit" value="Make GolfCard" />
+    </form>
+  </section>
+  <section id="golfCards">
+    <div class="golfCard">
+        {{#if golfCards}}
+            {{#each golfCards}}
+                <div class="golfCard">
+                    <h3 class="courseName">Course Name: {{this.courseName}}</h3>
+                    <h3 class="score">Score: {{this.score}}</h3>
+                </div>
+            {{/each}}
+        {{else}}
+            <h3 class="emptyGolfCard">No Cards yet</h3>
+        {{/if}}
+    </div>
+  </section>
+  <div id="domoMessage">
+    <h3><span id="errorMessage"></span></h3>
+  </div>
+  <script src="/assets/js/bundle.js"></script>
+</body>
+</html>
