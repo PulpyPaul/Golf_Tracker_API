@@ -23,8 +23,17 @@
     <form id="golfCardForm" name="golfCardForm" action="/maker" method="POST" class="golfCardForm container">
       <label for="courseName">Course Name: </label>
       <input id="courseName" type="text" name="courseName" placeholder="Course Name"/>
-      <label for="score">Score: </label>
-      <input id="score" type="text" name="score" placeholder="Score"/>
+      <h3>Card: </h3>
+        <h5>Hole 1: </h5>
+            <div class="input-field col s6">
+                <select>
+                  <option value="3">Par 3</option>
+                  <option value="4">Par 4</option>
+                  <option value="5">Par 5</option>
+                  <option value="6">Par 6</option>
+                </select>
+                <label>Par: </label>
+            </div>
       <input type="hidden" name="_csrf" value={{csrfToken}} />
       <input class="makeGolfCardSubmit" type="submit" value="Make GolfCard" />
     </form>

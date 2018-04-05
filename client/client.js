@@ -21,6 +21,8 @@ const sendAjax = (action, data) => {
 };
 
 $(document).ready(() => {
+  $('select').material_select();
+
   $('#signupForm').on('submit', (e) => {
     e.preventDefault();
 

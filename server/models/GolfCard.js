@@ -17,10 +17,16 @@ const GolfCardSchema = new mongoose.Schema({
     set: setName,
   },
 
-  score: {
-    type: Number,
-    min: 0,
+  card: {
+    type: Object,
     required: true,
+    holes: [
+      {
+        par: Number,
+        score: Number,
+        yards: Number,
+      },
+    ],
   },
 
   owner: {

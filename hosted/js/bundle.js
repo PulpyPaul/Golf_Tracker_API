@@ -23,6 +23,8 @@ var sendAjax = function sendAjax(action, data) {
 };
 
 $(document).ready(function () {
+  $('select').material_select();
+
   $('#signupForm').on('submit', function (e) {
     e.preventDefault();
 
