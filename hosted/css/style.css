@@ -6,3 +6,18 @@ nav div {
     margin-top: 15px;
     margin-bottom: 15px;
 }
+
+label {
+    font-size: 20px;
+}
+
+#golfCardForm {
+    padding: 10px;
+    border-color: #388e3c;
+    border-style: solid;
+    border-width: thin;
+}
+
+#cardSubmitButton {
+    margin-top: 10px;
+}
