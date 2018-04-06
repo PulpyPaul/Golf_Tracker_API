@@ -13,13 +13,34 @@ const makerPage = (req, res) => {
 };
 
 const makeGolfCard = (req, res) => {
-  if (!req.body.courseName || !req.body.score) {
-    return res.status(400).json({ error: 'Both course name and score are required' });
+  if (!req.body.courseName) {
+    return res.status(400).json({ error: 'Course Name is required' });
+  }
+
+  for (let i = 1; i < 2; i++) {
+    if (!`req.body.hole${i}Yards`) {
+      return res.status(400).json({ error: 'All yard measurements are requried' });
+    }
+    if (!`req.body.hole${i}Score`) {
+      return res.status(400).json({ error: 'All scores are requried' });
+    }
+  }
+
+  const holesObj = {
+    number: [],
+  };
+
+  for (let i = 0; i < 18; i++) {
+    holesObj.number.push({
+      par: `req.body.hole${i}Par`,
+      yards: `req.body.hole${i}Yards`,
+      score: `req.body.hole${i}Score`,
+    });
   }
 
   const golfCardData = {
     courseName: req.body.courseName,
-    score: req.body.score,
+    holes: holesObj,
     owner: req.session.account._id,
   };
 

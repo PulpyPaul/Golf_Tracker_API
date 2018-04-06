@@ -17,10 +17,10 @@ const GolfCardSchema = new mongoose.Schema({
     set: setName,
   },
 
-  card: {
+  holes: {
     type: Object,
     required: true,
-    holes: [
+    number: [
       {
         par: Number,
         score: Number,
@@ -43,7 +43,7 @@ const GolfCardSchema = new mongoose.Schema({
 
 GolfCardSchema.statics.toAPI = (doc) => ({
   courseName: doc.courseName,
-  score: doc.score,
+  card: doc.card,
 });
 
 GolfCardSchema.statics.findByOwner = (ownerID, callback) => {

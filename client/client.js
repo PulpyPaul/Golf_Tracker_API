@@ -54,16 +54,32 @@ $(document).ready(() => {
     return false;
   });
 
-  $('#golfCardForm').on('submit', (e) => {
+  $('#cardSubmitButton').on('click', (e) => {
     e.preventDefault();
 
-    if ($('#courseName').val() == '' || $('#score').val() == '') {
-      handleError('All fields are required');
+    if ($('#courseName').val() == '') {
+      handleError('Course Name is required!');
       return false;
+    }
+
+    for (let i = 1; i < 2; i++) {
+      if ($(`#hole${i}Yards`).val() == '') {
+        handleError('Yards for each hole is required!');
+        return false;
+      }
+        
+      if ($(`#hole${i}Score`).val() == '') {
+        handleError('Score for each hole is required!');
+        return false;
+      }
     }
 
     sendAjax($('#golfCardForm').attr('action'), $('#golfCardForm').serialize());
 
     return false;
   });
+
+  Handlebars.registerHelper('json', function(context) {
+    return JSON.stringify(context);
+});
 });
