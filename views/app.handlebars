@@ -21,314 +21,362 @@
   <h1 class="container center-align" id="golfHeader">Golf Tracker</h1>
   <section id="makeGolfCard">
     <form id="golfCardForm" name="golfCardForm" action="/maker" method="POST" class="golfCardForm container">
-      <label for="courseName">Course Name: </label>
-      <input id="courseName" type="text" name="courseName" placeholder="Course Name"/>
-      <h3>Card: </h3>
-        <h5>Hole 1: </h5>
-        <div class="container">
-        <label for="hole1Par">Par: </label>    
-        <div class="input-field col s6">
-                <select id="hole1Par" name="hole1Par">
-                  <option value="3">Par 3</option>
-                  <option value="4">Par 4</option>
-                  <option value="5">Par 5</option>
-                  <option value="6">Par 6</option>
-                </select>
-        </div>
-        <label for="hole1Yards">Yards: </label>
-        <input id="hole1Yards" type="number" name="hole1Yards" placeholder="Yards"/>
-        <label for="hole1Score" name="hole1Yards">Score: </label>
-        <input id="hole1Score" type="number" name="hole1Score" placeholder="Score"/>
-        </div>
-        <div class="divider"></div>
-        <h5>Hole 2: </h5>
-        <div class="container">
-        <label>Par: </label>    
-        <div class="input-field col s6">
-                <select id="hole2Par" name="hole2Par">
-                  <option value="3">Par 3</option>
-                  <option value="4">Par 4</option>
-                  <option value="5">Par 5</option>
-                  <option value="6">Par 6</option>
-                </select>
-        </div>
-        <label>Yards: </label>
-        <input id="hole2Yards" type="number" name="hole2Yards" placeholder="Yards"/>
-        <label>Score: </label>
-        <input id="hole2Score" type="number" name="hole2Score" placeholder="Score"/>
-        </div>
-        <div class="divider"></div>
-        <h5>Hole 3: </h5>
-        <div class="container">
-        <label>Par: </label>    
-        <div class="input-field col s6">
-                <select id="hole3Par" name="hole3Par">
-                  <option value="3">Par 3</option>
-                  <option value="4">Par 4</option>
-                  <option value="5">Par 5</option>
-                  <option value="6">Par 6</option>
-                </select>
-        </div>
-        <label>Yards: </label>
-        <input id="hole3Yards" type="number" name="hole3Yards" placeholder="Yards"/>
-        <label>Score: </label>
-        <input id="hole3Score" type="number" name="hole3Score" placeholder="Score"/>
-        </div>
-        <div class="divider"></div>
-        <h5>Hole 4: </h5>
-        <div class="container">
-        <label>Par: </label>    
-        <div class="input-field col s6">
-                <select id="hole4Par" name="hole4Par">
-                  <option value="3">Par 3</option>
-                  <option value="4">Par 4</option>
-                  <option value="5">Par 5</option>
-                  <option value="6">Par 6</option>
-                </select>
-        </div>
-        <label>Yards: </label>
-        <input id="hole4Yards" name="hole4Yards" type="number" placeholder="Yards"/>
-        <label>Score: </label>
-        <input id="hole4Score" name="hole4Score" type="number" placeholder="Score"/>
-        </div>
-        <div class="divider"></div>
-        <h5>Hole 5: </h5>
-        <div class="container">
-        <label>Par: </label>    
-        <div class="input-field col s6">
-                <select id="hole5Par" name="hole5Par">
-                  <option value="3">Par 3</option>
-                  <option value="4">Par 4</option>
-                  <option value="5">Par 5</option>
-                  <option value="6">Par 6</option>
-                </select>
-        </div>
-        <label>Yards: </label>
-        <input id="hole5Yards" name="hole5Yards" type="number" placeholder="Yards"/>
-        <label>Score: </label>
-        <input id="hole5Score" name="hole5Score" type="number" placeholder="Score"/>
-        </div>
-        <div class="divider"></div>
-        <h5>Hole 6: </h5>
-        <div class="container">
-        <label>Par: </label>    
-        <div class="input-field col s6">
-                <select id="hole6Par" name="hole6Par">
-                  <option value="3">Par 3</option>
-                  <option value="4">Par 4</option>
-                  <option value="5">Par 5</option>
-                  <option value="6">Par 6</option>
-                </select>
-        </div>
-        <label>Yards: </label>
-        <input id="hole6Yards" name="hole6Yards" type="number" placeholder="Yards"/>
-        <label>Score: </label>
-        <input id="hole6Score" name="hole6Score" type="number" placeholder="Score"/>
-        </div>
-        <div class="divider"></div>
-        <h5>Hole 7: </h5>
-        <div class="container">
-        <label>Par: </label>    
-        <div class="input-field col s6">
-                <select id="hole7Par" name="hole7Par">
-                  <option value="3">Par 3</option>
-                  <option value="4">Par 4</option>
-                  <option value="5">Par 5</option>
-                  <option value="6">Par 6</option>
-                </select>
-        </div>
-        <label>Yards: </label>
-        <input id="hole7Yards" name="hole7Yards" type="number" placeholder="Yards"/>
-        <label>Score: </label>
-        <input id="hole7Score" name="hole7Score" type="number" placeholder="Score"/>
-        </div>
-        <div class="divider"></div>
-        <h5>Hole 8: </h5>
-        <div class="container">
-        <label>Par: </label>    
-        <div class="input-field col s6">
-                <select id="hole8Par" name="hole8Par">
-                  <option value="3">Par 3</option>
-                  <option value="4">Par 4</option>
-                  <option value="5">Par 5</option>
-                  <option value="6">Par 6</option>
-                </select>
-        </div>
-        <label>Yards: </label>
-        <input id="hole8Yards" name="hole8Yards" type="number" placeholder="Yards"/>
-        <label>Score: </label>
-        <input id="hole8Score" name="hole8Score" type="number" placeholder="Score"/>
-        </div>
-        <div class="divider"></div>
-        <h5>Hole 9: </h5>
-        <div class="container">
-        <label>Par: </label>    
-        <div class="input-field col s6">
-                <select id="hole9Par" name="hole9Par">
-                  <option value="3">Par 3</option>
-                  <option value="4">Par 4</option>
-                  <option value="5">Par 5</option>
-                  <option value="6">Par 6</option>
-                </select>
-        </div>
-        <label>Yards: </label>
-        <input id="hole9Yards" name="hole9Yards" type="number" placeholder="Yards"/>
-        <label>Score: </label>
-        <input id="hole9Score" name="hole9Score" type="number" placeholder="Score"/>
-        </div>
-        <div class="divider"></div>
-        <h5>Hole 10: </h5>
-        <div class="container">
-        <label>Par: </label>    
-        <div class="input-field col s6">
-                <select id="hole10Par" name="hole10Par">
-                  <option value="3">Par 3</option>
-                  <option value="4">Par 4</option>
-                  <option value="5">Par 5</option>
-                  <option value="6">Par 6</option>
-                </select>
-        </div>
-        <label>Yards: </label>
-        <input id="hole10Yards" name="hole10Yards" type="number" placeholder="Yards"/>
-        <label>Score: </label>
-        <input id="hole10Score" name="hole10Score" type="number" placeholder="Score"/>
-        </div>
-        <div class="divider"></div>
-        <h5>Hole 11: </h5>
-        <div class="container">
-        <label>Par: </label>    
-        <div class="input-field col s6">
-                <select id="hole11Par" name="hole11Par">
-                  <option value="3">Par 3</option>
-                  <option value="4">Par 4</option>
-                  <option value="5">Par 5</option>
-                  <option value="6">Par 6</option>
-                </select>
-        </div>
-        <label>Yards: </label>
-        <input id="hole11Yards" name="hole11Yards" type="number" placeholder="Yards"/>
-        <label>Score: </label>
-        <input id="hole11Score" name="hole11Score" type="number" placeholder="Score"/>
-        </div>
-        <div class="divider"></div>
-        <h5>Hole 12: </h5>
-        <div class="container">
-        <label>Par: </label>    
-        <div class="input-field col s6">
-                <select id="hole12Par" name="hole12Par">
-                  <option value="3">Par 3</option>
-                  <option value="4">Par 4</option>
-                  <option value="5">Par 5</option>
-                  <option value="6">Par 6</option>
-                </select>
-        </div>
-        <label>Yards: </label>
-        <input id="hole12Yards" name="hole12Yards" type="number" placeholder="Yards"/>
-        <label>Score: </label>
-        <input id="hole12Score" name="hole12Score" type="number" placeholder="Score"/>
-        </div>
-        <div class="divider"></div>
-        <h5>Hole 13: </h5>
-        <div class="container">
-        <label>Par: </label>    
-        <div class="input-field col s6">
-                <select id="hole13Par" name="hole13Par">
-                  <option value="3">Par 3</option>
-                  <option value="4">Par 4</option>
-                  <option value="5">Par 5</option>
-                  <option value="6">Par 6</option>
-                </select>
-        </div>
-        <label>Yards: </label>
-        <input id="hole13Yards" name="hole13Yards" type="number" placeholder="Yards"/>
-        <label>Score: </label>
-        <input id="hole13Score" name="hole13Score" type="number" placeholder="Score"/>
-        </div>
-        <div class="divider"></div>
-        <h5>Hole 14: </h5>
-        <div class="container">
-        <label>Par: </label>    
-        <div class="input-field col s6">
-                <select id="hole14Par" name="hole14Par">
-                  <option value="3">Par 3</option>
-                  <option value="4">Par 4</option>
-                  <option value="5">Par 5</option>
-                  <option value="6">Par 6</option>
-                </select>
-        </div>
-        <label>Yards: </label>
-        <input id="hole14Yards" name="hole14Yards" type="number" placeholder="Yards"/>
-        <label>Score: </label>
-        <input id="hole14Score" name="hole14Score" type="number" placeholder="Score"/>
-        </div>
-        <div class="divider"></div>
-        <h5>Hole 15: </h5>
-        <div class="container">
-        <label>Par: </label>    
-        <div class="input-field col s6">
-                <select id="hole15Par" name="hole15Par">
-                  <option value="3">Par 3</option>
-                  <option value="4">Par 4</option>
-                  <option value="5">Par 5</option>
-                  <option value="6">Par 6</option>
-                </select>
-        </div>
-        <label>Yards: </label>
-        <input id="hole15Yards" name="hole15Yards" type="number" placeholder="Yards"/>
-        <label>Score: </label>
-        <input id="hole15Score" name="hole15Score" type="number" placeholder="Score"/>
-        </div>
-        <div class="divider"></div>
-        <h5>Hole 16: </h5>
-        <div class="container">
-        <label>Par: </label>    
-        <div class="input-field col s6">
-                <select id="hole16Par" name="hole16Par">
-                  <option value="3">Par 3</option>
-                  <option value="4">Par 4</option>
-                  <option value="5">Par 5</option>
-                  <option value="6">Par 6</option>
-                </select>
-        </div>
-        <label>Yards: </label>
-        <input id="hole16Yards" name="hole16Yards" type="number" placeholder="Yards"/>
-        <label>Score: </label>
-        <input id="hole16Score" name="hole16Score" type="number" placeholder="Score"/>
-        </div>
-        <div class="divider"></div>
-        <h5>Hole 17: </h5>
-        <div class="container">
-        <label>Par: </label>    
-        <div class="input-field col s6">
-                <select id="hole17Par" name="hole17Par">
-                  <option value="3">Par 3</option>
-                  <option value="4">Par 4</option>
-                  <option value="5">Par 5</option>
-                  <option value="6">Par 6</option>
-                </select>
-        </div>
-        <label>Yards: </label>
-        <input id="hole17Yards" name="hole17Yards" type="number" placeholder="Yards"/>
-        <label>Score: </label>
-        <input id="hole17Score" name="hole17Score" type="number" placeholder="Score"/>
-        </div>
-        <div class="divider"></div>
-        <h5>Hole 18: </h5>
-        <div class="container">
-        <label>Par: </label>    
-        <div class="input-field col s6">
-                <select id="hole18Par" name="hole18Par">
-                  <option value="3">Par 3</option>
-                  <option value="4">Par 4</option>
-                  <option value="5">Par 5</option>
-                  <option value="6">Par 6</option>
-                </select>
-        </div>
-        <label>Yards: </label>
-        <input id="hole18Yards" name="hole18Yards" type="number" placeholder="Yards"/>
-        <label>Score: </label>
-        <input id="hole18Score" name="hole18Score" type="number" placeholder="Score"/>
-        </div>
+        <table>
+            <h5>Course Name</h5>
+            <input id="courseName" type="text" name="courseName" placeholder="Enter name here"/>
+            <thead>
+                <tr>
+                    <th>Hole</th>
+                    <th>Par</th>
+                    <th>Yards</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <div class="input-field col s6 valign-wrapper parSelect">
+                        <select id="hole1Par" name="hole1Par">
+                            <option value="3">Par 3</option>
+                            <option value="4">Par 4</option>
+                            <option value="5">Par 5</option>
+                            <option value="6">Par 6</option>
+                        </select>
+                        </div>      
+                    </td>
+                    <td>
+                        <input id="hole1Yards" class="valign-wrapper" type="number" name="hole1Yards" placeholder="Yards"/>
+                    </td>
+                    <td>
+                        <input id="hole1Score" class="valign-wrapper" type="number" name="hole1Score" placeholder="Score"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>
+                        <div class="input-field col s6 valign-wrapper parSelect">
+                        <select id="hole2Par" name="hole2Par">
+                            <option value="3">Par 3</option>
+                            <option value="4">Par 4</option>
+                            <option value="5">Par 5</option>
+                            <option value="6">Par 6</option>
+                        </select>
+                        </div>      
+                    </td>
+                    <td>
+                        <input id="hole2Yards" class="valign-wrapper" type="number" name="hole2Yards" placeholder="Yards"/>
+                    </td>
+                    <td>
+                        <input id="hole2Score" class="valign-wrapper" type="number" name="hole2Score" placeholder="Score"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>
+                        <div class="input-field col s6 valign-wrapper parSelect">
+                        <select id="hole3Par" name="hole3Par">
+                            <option value="3">Par 3</option>
+                            <option value="4">Par 4</option>
+                            <option value="5">Par 5</option>
+                            <option value="6">Par 6</option>
+                        </select>
+                        </div>      
+                    </td>
+                    <td>
+                        <input id="hole3Yards" class="valign-wrapper" type="number" name="hole3Yards" placeholder="Yards"/>
+                    </td>
+                    <td>
+                        <input id="hole3Score" class="valign-wrapper" type="number" name="hole3Score" placeholder="Score"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>
+                        <div class="input-field col s6 valign-wrapper parSelect">
+                        <select id="hole4Par" name="hole4Par">
+                            <option value="3">Par 3</option>
+                            <option value="4">Par 4</option>
+                            <option value="5">Par 5</option>
+                            <option value="6">Par 6</option>
+                        </select>
+                        </div>      
+                    </td>
+                    <td>
+                        <input id="hole4Yards" class="valign-wrapper" type="number" name="hole4Yards" placeholder="Yards"/>
+                    </td>
+                    <td>
+                        <input id="hole4Score" class="valign-wrapper" type="number" name="hole4Score" placeholder="Score"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>
+                        <div class="input-field col s6 valign-wrapper parSelect">
+                        <select id="hole5Par" name="hole5Par">
+                            <option value="3">Par 3</option>
+                            <option value="4">Par 4</option>
+                            <option value="5">Par 5</option>
+                            <option value="6">Par 6</option>
+                        </select>
+                        </div>      
+                    </td>
+                    <td>
+                        <input id="hole5Yards" class="valign-wrapper" type="number" name="hole5Yards" placeholder="Yards"/>
+                    </td>
+                    <td>
+                        <input id="hole5Score" class="valign-wrapper" type="number" name="hole5Score" placeholder="Score"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>
+                        <div class="input-field col s6 valign-wrapper parSelect">
+                        <select id="hole6Par" name="hole6Par">
+                            <option value="3">Par 3</option>
+                            <option value="4">Par 4</option>
+                            <option value="5">Par 5</option>
+                            <option value="6">Par 6</option>
+                        </select>
+                        </div>      
+                    </td>
+                    <td>
+                        <input id="hole6Yards" class="valign-wrapper" type="number" name="hole6Yards" placeholder="Yards"/>
+                    </td>
+                    <td>
+                        <input id="hole6Score" class="valign-wrapper" type="number" name="hole6Score" placeholder="Score"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>
+                        <div class="input-field col s6 valign-wrapper parSelect">
+                        <select id="hole7Par" name="hole7Par">
+                            <option value="3">Par 3</option>
+                            <option value="4">Par 4</option>
+                            <option value="5">Par 5</option>
+                            <option value="6">Par 6</option>
+                        </select>
+                        </div>      
+                    </td>
+                    <td>
+                        <input id="hole7Yards" class="valign-wrapper" type="number" name="hole7Yards" placeholder="Yards"/>
+                    </td>
+                    <td>
+                        <input id="hole7Score" class="valign-wrapper" type="number" name="hole7Score" placeholder="Score"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>
+                        <div class="input-field col s6 valign-wrapper parSelect">
+                        <select id="hole8Par" name="hole8Par">
+                            <option value="3">Par 3</option>
+                            <option value="4">Par 4</option>
+                            <option value="5">Par 5</option>
+                            <option value="6">Par 6</option>
+                        </select>
+                        </div>      
+                    </td>
+                    <td>
+                        <input id="hole8Yards" class="valign-wrapper" type="number" name="hole8Yards" placeholder="Yards"/>
+                    </td>
+                    <td>
+                        <input id="hole8Score" class="valign-wrapper" type="number" name="hole8Score" placeholder="Score"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>
+                        <div class="input-field col s6 valign-wrapper parSelect">
+                        <select id="hole9Par" name="hole9Par">
+                            <option value="3">Par 3</option>
+                            <option value="4">Par 4</option>
+                            <option value="5">Par 5</option>
+                            <option value="6">Par 6</option>
+                        </select>
+                        </div>      
+                    </td>
+                    <td>
+                        <input id="hole9Yards" class="valign-wrapper" type="number" name="hole9Yards" placeholder="Yards"/>
+                    </td>
+                    <td>
+                        <input id="hole9Score" class="valign-wrapper" type="number" name="hole9Score" placeholder="Score"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>
+                        <div class="input-field col s6 valign-wrapper parSelect">
+                        <select id="hole10Par" name="hole10Par">
+                            <option value="3">Par 3</option>
+                            <option value="4">Par 4</option>
+                            <option value="5">Par 5</option>
+                            <option value="6">Par 6</option>
+                        </select>
+                        </div>      
+                    </td>
+                    <td>
+                        <input id="hole10Yards" class="valign-wrapper" type="number" name="hole10Yards" placeholder="Yards"/>
+                    </td>
+                    <td>
+                        <input id="hole10Score" class="valign-wrapper" type="number" name="hole10Score" placeholder="Score"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>
+                        <div class="input-field col s6 valign-wrapper parSelect">
+                        <select id="hole11Par" name="hole11Par">
+                            <option value="3">Par 3</option>
+                            <option value="4">Par 4</option>
+                            <option value="5">Par 5</option>
+                            <option value="6">Par 6</option>
+                        </select>
+                        </div>      
+                    </td>
+                    <td>
+                        <input id="hole11Yards" class="valign-wrapper" type="number" name="hole11Yards" placeholder="Yards"/>
+                    </td>
+                    <td>
+                        <input id="hole11Score" class="valign-wrapper" type="number" name="hole11Score" placeholder="Score"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>
+                        <div class="input-field col s6 valign-wrapper parSelect">
+                        <select id="hole12Par" name="hole12Par">
+                            <option value="3">Par 3</option>
+                            <option value="4">Par 4</option>
+                            <option value="5">Par 5</option>
+                            <option value="6">Par 6</option>
+                        </select>
+                        </div>      
+                    </td>
+                    <td>
+                        <input id="hole12Yards" class="valign-wrapper" type="number" name="hole12Yards" placeholder="Yards"/>
+                    </td>
+                    <td>
+                        <input id="hole12Score" class="valign-wrapper" type="number" name="hole12Score" placeholder="Score"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>
+                        <div class="input-field col s6 valign-wrapper parSelect">
+                        <select id="hole13Par" name="hole13Par">
+                            <option value="3">Par 3</option>
+                            <option value="4">Par 4</option>
+                            <option value="5">Par 5</option>
+                            <option value="6">Par 6</option>
+                        </select>
+                        </div>      
+                    </td>
+                    <td>
+                        <input id="hole13Yards" class="valign-wrapper" type="number" name="hole13Yards" placeholder="Yards"/>
+                    </td>
+                    <td>
+                        <input id="hole13Score" class="valign-wrapper" type="number" name="hole13Score" placeholder="Score"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>
+                        <div class="input-field col s6 valign-wrapper parSelect">
+                        <select id="hole14Par" name="hole14Par">
+                            <option value="3">Par 3</option>
+                            <option value="4">Par 4</option>
+                            <option value="5">Par 5</option>
+                            <option value="6">Par 6</option>
+                        </select>
+                        </div>      
+                    </td>
+                    <td>
+                        <input id="hole14Yards" class="valign-wrapper" type="number" name="hole14Yards" placeholder="Yards"/>
+                    </td>
+                    <td>
+                        <input id="hole14Score" class="valign-wrapper" type="number" name="hole14Score" placeholder="Score"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>
+                        <div class="input-field col s6 valign-wrapper parSelect">
+                        <select id="hole15Par" name="hole15Par">
+                            <option value="3">Par 3</option>
+                            <option value="4">Par 4</option>
+                            <option value="5">Par 5</option>
+                            <option value="6">Par 6</option>
+                        </select>
+                        </div>      
+                    </td>
+                    <td>
+                        <input id="hole15Yards" class="valign-wrapper" type="number" name="hole15Yards" placeholder="Yards"/>
+                    </td>
+                    <td>
+                        <input id="hole15Score" class="valign-wrapper" type="number" name="hole15Score" placeholder="Score"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>
+                        <div class="input-field col s6 valign-wrapper parSelect">
+                        <select id="hole16Par" name="hole16Par">
+                            <option value="3">Par 3</option>
+                            <option value="4">Par 4</option>
+                            <option value="5">Par 5</option>
+                            <option value="6">Par 6</option>
+                        </select>
+                        </div>      
+                    </td>
+                    <td>
+                        <input id="hole16Yards" class="valign-wrapper" type="number" name="hole16Yards" placeholder="Yards"/>
+                    </td>
+                    <td>
+                        <input id="hole16Score" class="valign-wrapper" type="number" name="hole16Score" placeholder="Score"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>
+                        <div class="input-field col s6 valign-wrapper parSelect">
+                        <select id="hole17Par" name="hole17Par">
+                            <option value="3">Par 3</option>
+                            <option value="4">Par 4</option>
+                            <option value="5">Par 5</option>
+                            <option value="6">Par 6</option>
+                        </select>
+                        </div>      
+                    </td>
+                    <td>
+                        <input id="hole17Yards" class="valign-wrapper" type="number" name="hole17Yards" placeholder="Yards"/>
+                    </td>
+                    <td>
+                        <input id="hole17Score" class="valign-wrapper" type="number" name="hole17Score" placeholder="Score"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>
+                        <div class="input-field col s6 valign-wrapper parSelect">
+                        <select id="hole18Par" name="hole18Par">
+                            <option value="3">Par 3</option>
+                            <option value="4">Par 4</option>
+                            <option value="5">Par 5</option>
+                            <option value="6">Par 6</option>
+                        </select>
+                        </div>      
+                    </td>
+                    <td>
+                        <input id="hole18Yards" class="valign-wrapper" type="number" name="hole18Yards" placeholder="Yards"/>
+                    </td>
+                    <td>
+                        <input id="hole18Score" class="valign-wrapper" type="number" name="hole18Score" placeholder="Score"/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
         <div class="divider"></div>
       <input type="hidden" name="_csrf" value={{csrfToken}} />
         <div class="container center-align" id="cardSubmitContainer">
@@ -342,7 +390,7 @@
             {{#each golfCards}}
                 <div class="golfCard">
                     <h3 class="courseName">Course Name: {{this.courseName}}</h3>
-                    <h3>Score: </h3>
+                    <h3>{{this}}</h3>
                 </div>
             {{/each}}
         {{else}}

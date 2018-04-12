@@ -45,6 +45,8 @@ const makeGolfCard = (req, res) => {
   };
 
   const newGolfCard = new GolfCard.GolfCardModel(golfCardData);
+    
+  console.dir(newGolfCard);
 
   const golfCardPromise = newGolfCard.save();
 

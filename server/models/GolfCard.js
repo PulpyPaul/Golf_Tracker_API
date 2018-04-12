@@ -43,7 +43,7 @@ const GolfCardSchema = new mongoose.Schema({
 
 GolfCardSchema.statics.toAPI = (doc) => ({
   courseName: doc.courseName,
-  card: doc.card,
+  holes: doc.holes,
 });
 
 GolfCardSchema.statics.findByOwner = (ownerID, callback) => {
