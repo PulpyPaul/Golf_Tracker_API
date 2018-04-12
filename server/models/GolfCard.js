@@ -51,7 +51,7 @@ GolfCardSchema.statics.findByOwner = (ownerID, callback) => {
     owner: convertId(ownerID),
   };
 
-  return GolfCardModel.find(search).select('courseName score').exec(callback);
+  return GolfCardModel.find(search).select('courseName').exec(callback);
 };
 
 GolfCardModel = mongoose.model('GolfCard', GolfCardSchema);
