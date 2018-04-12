@@ -14,6 +14,7 @@
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Logo</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/cards"> View Cards</a></li>
         <li><a href="/logout">Logout</a></li>
       </ul>
     </div>
@@ -383,20 +384,6 @@
         <a class="waves-effect waves-light btn green darken-2" type="submit" id="cardSubmitButton">Make Golf Card</a>
         </div>
     </form>
-  </section>
-  <section id="golfCards">
-    <div class="golfCard">
-        {{#if golfCards}}
-            {{#each golfCards}}
-                <div class="golfCard">
-                    <h3 class="courseName">Course Name: {{this.courseName}}</h3>
-                    <h3>{{this}}</h3>
-                </div>
-            {{/each}}
-        {{else}}
-            <h3 class="emptyGolfCard">No Cards yet</h3>
-        {{/if}}
-    </div>
   </section>
   <div id="domoMessage">
     <h3><span id="errorMessage"></span></h3>

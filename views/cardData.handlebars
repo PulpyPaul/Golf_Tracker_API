@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Golf Tracker</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/assets/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="/assets/css/materialize.min.css"  media="screen,projection"/>
+  <link rel="shortcut icon" href="/assets/img/favicon.png"/>
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
+</head>
+<body>
+  <nav class="green darken-2">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/maker">Add Card</a></li>
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+  <h1 class="container center-align" id="golfHeader">Golf Tracker</h1>
+  <section id="golfCards">
+    <div class="golfCard">
+        {{#if golfCards}}
+            {{#each golfCards}}
+            <div class="row">
+                <div class="col s12 m6">
+                  <div class="card green darken-2">
+                    <div class="card-content white-text">
+                      <span class="card-title">{{this.courseName}}</span>
+                        <table class="white-text">
+                            <thead>
+                                <tr>
+                                    <th>Hole</th>
+                                    <th>Par</th>
+                                    <th>Yards</th>
+                                    <th>Score</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>{{this.holes.number.[0].par}}</td>
+                                    <td>{{this.holes.number.[0].yards}}</td>
+                                    <td>{{this.holes.number.[0].score}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                 </div>
+                </div>
+            </div>    
+            {{/each}}
+        {{else}}
+            <h3 class="emptyGolfCard">You have no saved cards!</h3>
+        {{/if}}
+    </div>
+  </section>
+  <div id="domoMessage">
+    <h3><span id="errorMessage"></span></h3>
+  </div>
+  <script src="/assets/js/bundle.js"></script>
+</body>
+</html>

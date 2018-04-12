@@ -12,6 +12,18 @@ const makerPage = (req, res) => {
   });
 };
 
+const cardPage = (req, res) => {
+  GolfCard.GolfCardModel.findByOwner(req.session.account._id, (err, docs) => {
+    if (err) {
+      console.log(err);
+      return res.status(400).json({ error: 'An error occurred' });
+    }
+
+    return res.render('cardData', { csrfToken: req.csrfToken(), golfCards: docs });
+  });
+};
+
+
 const makeGolfCard = (req, res) => {
   if (!req.body.courseName) {
     return res.status(400).json({ error: 'Course Name is required' });
@@ -31,10 +43,14 @@ const makeGolfCard = (req, res) => {
   };
 
   for (let i = 1; i < 19; i++) {
+    const parIndex = `hole${i}Par`;
+    const yardsIndex = `hole${i}Yards`;
+    const scoreIndex = `hole${i}Score`;
+
     holesObj.number.push({
-      par: `req.body.hole${i}Par`,
-      yards: `req.body.hole${i}Yards`,
-      score: `req.body.hole${i}Score`,
+      par: `${req.body[parIndex]}`,
+      yards: `${req.body[yardsIndex]}`,
+      score: `${req.body[scoreIndex]}`,
     });
   }
 
@@ -45,9 +61,9 @@ const makeGolfCard = (req, res) => {
   };
 
   console.dir(golfCardData.holes.number[0]);
-    
+
   const newGolfCard = new GolfCard.GolfCardModel(golfCardData);
-    
+
   const golfCardPromise = newGolfCard.save();
 
   golfCardPromise.then(() => res.json({ redirect: '/maker' }));
@@ -66,3 +82,4 @@ const makeGolfCard = (req, res) => {
 
 module.exports.makerPage = makerPage;
 module.exports.make = makeGolfCard;
+module.exports.cardPage = cardPage;
