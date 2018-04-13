@@ -29,7 +29,7 @@ const makeGolfCard = (req, res) => {
     return res.status(400).json({ error: 'Course Name is required' });
   }
 
-  for (let i = 1; i < 6; i++) {
+  for (let i = 1; i < 19; i++) {
     if (!`req.body.hole${i}Yards`) {
       return res.status(400).json({ error: 'All yard measurements are requried' });
     }
@@ -59,8 +59,6 @@ const makeGolfCard = (req, res) => {
     holes: holesObj,
     owner: req.session.account._id,
   };
-
-  console.dir(golfCardData.holes.number[0]);
 
   const newGolfCard = new GolfCard.GolfCardModel(golfCardData);
 
