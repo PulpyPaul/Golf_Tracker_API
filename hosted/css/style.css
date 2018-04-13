@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "GolfFont";
+    src:url("../fonts/golf/jlreasytees.ttf");
+}
+
 nav div {
     margin-left: 20px;
 }
@@ -24,4 +29,9 @@ label {
 
 .parSelect {
     margin-top: 0px;
+}
+
+h1 {
+    font-family: GolfFont;
+    font-size: 80px;
 }

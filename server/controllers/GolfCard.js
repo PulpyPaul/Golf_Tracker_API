@@ -23,6 +23,7 @@ const cardPage = (req, res) => {
   });
 };
 
+const infoPage = (req, res) => res.render('info', { csrfToken: req.csrfToken() });
 
 const makeGolfCard = (req, res) => {
   if (!req.body.courseName) {
@@ -81,3 +82,4 @@ const makeGolfCard = (req, res) => {
 module.exports.makerPage = makerPage;
 module.exports.make = makeGolfCard;
 module.exports.cardPage = cardPage;
+module.exports.infoPage = infoPage;

@@ -22,6 +22,7 @@ const sendAjax = (action, data) => {
 
 $(document).ready(() => {
   $('select').material_select();
+  $('.collapsible').collapsible();
 
   $('#signupForm').on('submit', (e) => {
     e.preventDefault();
