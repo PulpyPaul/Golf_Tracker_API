@@ -3,7 +3,7 @@
   <meta charset="utf-8"/>
   <title>DomoMaker</title>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script type="text/javascript" src="/assets/js/materialize.min.js"></script>
+  
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="/assets/css/materialize.min.css"  media="screen,projection"/>
   <link rel="shortcut icon" href="/assets/img/favicon.png"/>
@@ -12,7 +12,7 @@
 <body>
   <nav class="green darken-2">
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
+      <img src="../assets/img/golfBall.png" alt="golfBall" class="golfBall"/>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="/info">Info</a></li>
         <li><a href="/signup">Sign up</a></li>
@@ -28,11 +28,12 @@
       <input id="pass" type="password" name="pass" placeholder="password"/>
       <input type="hidden" name="_csrf" value={{csrfToken}} />
       <div class="container center-align">
-      <input class="formSubmit" type="submit" value="Sign In" />
+      <a class="waves-effect waves-light btn green darken-2" type="submit" value="Sign In" id="loginBtn">Sign In</a>
       </div>
     </form>
   </section>
-  <h3><span id="errorMessage">yo</span></h3>
+  <h3><span id="errorMessage"></span></h3>
+    <script type="text/javascript" src="/assets/js/materialize.min.js"></script>
   <script src="/assets/js/bundle.js"></script>
 </body>
 </html>

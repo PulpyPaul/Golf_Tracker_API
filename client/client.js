@@ -24,7 +24,7 @@ $(document).ready(() => {
   $('select').material_select();
   $('.collapsible').collapsible();
 
-  $('#signupForm').on('submit', (e) => {
+  $('#signUpBtn').on('click', (e) => {
     e.preventDefault();
 
     if ($('#user').val() == '' || $('#pass').val() == '' || $('#pass2').val() == '') {
@@ -42,7 +42,7 @@ $(document).ready(() => {
     return false;
   });
 
-  $('#loginForm').on('submit', (e) => {
+  $('#loginBtn').on('click', (e) => {
     e.preventDefault();
 
     if ($('#user').val() == '' || $('#pass').val() == '') {

@@ -35,3 +35,8 @@ h1 {
     font-family: GolfFont;
     font-size: 80px;
 }
+
+.golfBall {
+    height: 60px;
+    width: 60px;
+}

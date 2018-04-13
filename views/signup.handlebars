@@ -12,7 +12,7 @@
 <body>
   <nav class="green darken-2">
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
+      <img src="../assets/img/golfBall.png" alt="golfBall" class="golfBall"/>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="/info">Info</a></li>
         <li><a href="/login">Login</a></li>
@@ -30,11 +30,11 @@
       <input id="pass2" type="password" name="pass2" placeholder="retype password"/>
       <input type="hidden" name="_csrf" value={{csrfToken}} />
       <div class="container center-align">
-      <input class="formSubmit" type="submit" value="Create Account" />
+      <a class="waves-effect waves-light btn green darken-2" type="submit" value="Sign up" id="signUpBtn" name="action">Sign up</a>
       </div>
     </form>
   </section>
-  <h3><span id="errorMessage">yo</span></h3>
+  <h3><span id="errorMessage"></span></h3>
   <script src="/assets/js/bundle.js"></script>
 </body>
 </html>
