@@ -41,12 +41,19 @@ const makeGolfCard = (req, res) => {
 
   const holesObj = {
     number: [],
+    parTotal: 0,
+    yardsTotal: 0,
+    scoreTotal: 0,
   };
 
   for (let i = 1; i < 19; i++) {
     const parIndex = `hole${i}Par`;
     const yardsIndex = `hole${i}Yards`;
     const scoreIndex = `hole${i}Score`;
+
+    holesObj.parTotal += parseInt(`${req.body[parIndex]}`, 10);
+    holesObj.yardsTotal += parseInt(`${req.body[yardsIndex]}`, 10);
+    holesObj.scoreTotal += parseInt(`${req.body[scoreIndex]}`, 10);
 
     holesObj.number.push({
       par: `${req.body[parIndex]}`,

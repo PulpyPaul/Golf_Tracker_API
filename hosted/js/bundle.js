@@ -65,7 +65,7 @@ $(document).ready(function () {
       return false;
     }
 
-    for (var i = 1; i < 2; i++) {
+    for (var i = 1; i < 19; i++) {
       if ($('#hole' + i + 'Yards').val() == '') {
         handleError('Yards for each hole is required!');
         return false;

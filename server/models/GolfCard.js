@@ -27,6 +27,9 @@ const GolfCardSchema = new mongoose.Schema({
         yards: Number,
       },
     ],
+    parTotal: Number,
+    yardsTotal: Number,
+    scoreTotal: Number,
   },
 
   owner: {
