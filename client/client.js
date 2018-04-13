@@ -1,7 +1,9 @@
+// Helper function for errors
 const handleError = (message) => {
   $('#errorMessage').text(message);
 };
 
+// Standard function for sending AJAX requests
 const sendAjax = (action, data) => {
   $.ajax({
     cache: false,
@@ -20,61 +22,78 @@ const sendAjax = (action, data) => {
   });
 };
 
+// Wrapper event for when document is ready
 $(document).ready(() => {
+  
+  // Initializers for Materialize elements
   $('select').material_select();
   $('.collapsible').collapsible();
 
+  // Sign up Button Event
   $('#signUpBtn').on('click', (e) => {
     e.preventDefault();
 
+    // Checks for all user fields filled in
     if ($('#user').val() == '' || $('#pass').val() == '' || $('#pass2').val() == '') {
-      handleError('All fields are required');
+      Materialize.toast('All fields are required', 3000);
       return false;
     }
 
+    // Checks for matching passwords
     if ($('#pass').val() !== $('#pass2').val()) {
-      handleError('Passwords do not match');
+      Materialize.toast('Passwords do not match', 3000);
       return false;
     }
-
+    
+    // Sends request to create account and submits form
+    Materialize.toast('Account Created!', 3000);
     sendAjax($('#signupForm').attr('action'), $('#signupForm').serialize());
 
     return false;
   });
 
+  // Login Button Event
   $('#loginBtn').on('click', (e) => {
     e.preventDefault();
 
+    // Checks for all fields to be filled out
     if ($('#user').val() == '' || $('#pass').val() == '') {
-      handleError('Username or password is empty');
+      Materialize.toast('Username or password is empty', 3000);
       return false;
     }
 
+    // Sends request to log in and submits form
+    Materialize.toast('Login Successful!', 3000);
     sendAjax($('#loginForm').attr('action'), $('#loginForm').serialize());
 
     return false;
   });
 
+  // Card Submit Button Event
   $('#cardSubmitButton').on('click', (e) => {
     e.preventDefault();
 
+    // Checks to make sure course name is filled in
     if ($('#courseName').val() == '') {
-      handleError('Course Name is required!');
+      Materialize.toast('Course Name is required!', 3000);
       return false;
     }
 
+    // Checks for all yard and score fields
     for (let i = 1; i < 19; i++) {
       if ($(`#hole${i}Yards`).val() == '') {
-        handleError('Yards for each hole is required!');
+        Materialize.toast('Yards for each hole is required!', 3000);
         return false;
       }
         
       if ($(`#hole${i}Score`).val() == '') {
-        handleError('Score for each hole is required!');
+        Materialize.toast('Score for each hole is required!', 3000);
         return false;
       }
     }
-
+    
+    // Sends request and submits form
+    Materialize.toast('Card Created!', 3000);
     sendAjax($('#golfCardForm').attr('action'), $('#golfCardForm').serialize());
 
     return false;

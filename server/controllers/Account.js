@@ -1,24 +1,29 @@
+// Imports
 const models = require('../models');
-
 const Account = models.Account;
 
+// Serves login Page
 const loginPage = (req, res) => {
   res.render('login', { csrfToken: req.csrfToken() });
 };
 
+// Serves sign up page
 const signupPage = (req, res) => {
   res.render('signup', { csrfToken: req.csrfToken() });
 };
 
+// Serves not found page
 const notFoundPage = (req, res) => {
   res.status(404).render('notFound', { csrfToken: req.csrfToken() });
 };
 
+// Handles logout
 const logout = (req, res) => {
   req.session.destroy();
   res.redirect('/');
 };
 
+// Handles Login
 const login = (request, response) => {
   const req = request;
   const res = response;
@@ -41,6 +46,7 @@ const login = (request, response) => {
   });
 };
 
+// Handles signup
 const signup = (request, response) => {
   const req = request;
   const res = response;
@@ -85,6 +91,7 @@ const signup = (request, response) => {
   });
 };
 
+// Exports
 module.exports.loginPage = loginPage;
 module.exports.login = login;
 module.exports.logout = logout;

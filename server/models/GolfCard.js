@@ -9,6 +9,7 @@ let GolfCardModel = {};
 const convertId = mongoose.Types.ObjectId;
 const setName = (name) => _.escape(name).trim();
 
+// Data model for golf cards
 const GolfCardSchema = new mongoose.Schema({
   courseName: {
     type: String,
